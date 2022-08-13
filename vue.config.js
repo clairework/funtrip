@@ -1,13 +1,14 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  transpileDependencies: ['vue-meta'] // true
+  // true
+  transpileDependencies: ['vue-meta'],
+
+  publicPath: '/funtrip/dist'
 })
 
 // vue.config.js
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/claire-api/'
-    : '/',
+  publicPath: '/funtrip/dist',
   chainWebpack: (config) => {
     config
       .plugin('html')
