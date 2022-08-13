@@ -1,0 +1,50 @@
+.product-banner{
+    background-image: url("@/assets/images/homecate06.jpg");
+    background-position: top center;
+    background-attachment: fixed;
+    height: 100px;     
+    @include media-breakpoint-up(md) {
+      height: 200px;
+    }
+  }
+
+  .product{
+  li {
+    margin-bottom: 10px;
+  }
+  .icon {
+    font-size: 90%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $secondary;
+    color: $white;
+    margin-right: 10px;
+  }
+  .icon-popular {
+    background-color: $red-500;
+    font-size: 16px;
+  }
+  img {
+    transition: all 0.5s ease-in-out;
+    object-fit: cover;
+  }
+}
+.breadcrumb {
+  background-color: transparent;
+  margin-right: 4em;
+
+  padding: 0;
+  a {
+    color: $gray-700;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+.breadcrumb-item.active {
+  color: $gray-500;
+}

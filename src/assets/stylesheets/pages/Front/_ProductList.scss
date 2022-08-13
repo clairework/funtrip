@@ -1,0 +1,119 @@
+.list-base {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.list-banner {
+  background-image: url("@/assets/images/listbanner.jpg");
+  background-position: center center;
+  background-size: cover; 
+  height: 200px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($black, $alpha: 0.2);
+  }
+  .title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 35%;
+  }
+}
+@include media-breakpoint-up(md) {
+  .list-banner {
+    height: 300px;
+  }
+}
+
+.section_category {
+  padding-bottom: 40px;
+  .wrap {
+    margin-top: -80px;
+  }
+  .category {
+    width: 120px;
+    display: flex;
+    justify-content: center;
+  }
+  .category-btn {
+    width: calc(100% - 30px);
+    padding: 0.2rem;
+    padding-top: 0.4rem;
+  }
+  .category-icon {
+    max-width: 100px;
+  }
+  .category-box {
+    height: 100px;
+    @media ( max-width: 768px) {
+      height: 70px;
+    }
+  }
+  h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: $dark;
+  }
+}
+
+.section_products {
+  padding-top: 0;
+  .card-content {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+  }
+  .card {
+    border: none;
+    position: relative;
+    .img-wrap {
+      overflow: hidden;
+      height: 200px;
+      position: relative;
+      cursor: pointer;
+    }
+    img {
+      transition: all 0.5s ease-in-out;
+      object-fit: cover;
+    }
+    //洲名標籤
+    .badge {
+      text-transform: capitalize;
+      position: absolute;
+      left: 1px;
+      z-index: 15;
+    }
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+    }
+    .card-body {
+      background-color: $gray-100;
+      position: relative;
+      padding-bottom: 10px;
+      margin-bottom: 38px;
+      height: 160px;
+    }
+    .card-text {
+      height: 100px;
+    }
+    .btn-addTocart {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}

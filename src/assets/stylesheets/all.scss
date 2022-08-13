@@ -1,0 +1,21 @@
+// 變數
+@import "~bootstrap/scss/functions";
+@import "./helpers/variables"; 
+@import "./helpers/utilities";
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "./helpers/helper";
+
+@import "./components/ProdCard";
+@import "./components/Cart";
+@import "./Components/OrderSteps";
+
+@import "./pages/Front/IndexHome";
+@import "./pages/Front/ProductList";
+@import "./pages/Front/MyFavorite";
+@import "./pages/Front/ProductDetail";
+@import "./pages/Admin/products";
+
+@import "./Layouts/header";
+@import "./Layouts/base";

@@ -1,0 +1,163 @@
+ 
+.section-banner {
+  .index-banner {
+    background-image: url("@/assets/images/home.jpg");    
+    background-position: center center;
+    background-size: cover;
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba($black, $alpha: 0.4);
+    }
+    @media ( max-width: 768px) {
+      height: 90vh;
+    }
+  }
+    
+  .indexbox-text{
+    line-height: 32px;
+  }
+
+  .indexbox{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 80px;
+  }
+  
+  .imgbox{
+    height: 50px;
+    width: 50px;
+    background-color: antiquewhite;
+  }
+
+  .txt-wrap {
+    color: $white;
+    padding: 30px 120px;
+  }
+  h2 {
+    font-weight: 600;
+    max-width: 12em;
+  }
+  .link {
+    width: 48%;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    opacity: 0.9;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+//旅遊精選
+.section_hot {
+  background-position:  center;
+  background-color: #fffbf9;
+
+  ul {
+    padding-left: 20px;
+  }
+  .link {
+    color: $white;
+    padding: 6px 15px;
+    display: inline-block;
+    margin-bottom: 30px;
+    width: 100px;
+  }
+  .h3 {
+    font-size: 350%;
+  }
+}
+
+.section-category {
+
+  .index-card {
+    height: 200px;
+  }
+
+  .card-bk1{
+    background-image: url("@/assets/images/homecate01.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .card-bk2{
+    background-image: url("@/assets/images/homecate02.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .card-bk3{
+    background-image: url("@/assets/images/homecate03.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .card-bk4{
+    background-image: url("@/assets/images/homecate04.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .card-bk5{
+    background-image: url("@/assets/images/homecate05.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .card-bk6{
+    background-image: url("@/assets/images/homecate06.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .card-hover{
+    &:hover{
+      &::after{
+        transition: all 3s ease-out;
+        content:"";
+        position: absolute;
+        width: 100%;
+        height:100%;
+        top: 0%;
+        left: 0%;
+        background-color: rgba($white,0.5);
+      }
+    }
+  }
+}
+
+.section-person {
+  .bg-person {
+  background-color: $white;
+  background-position: center;
+  }
+  .box {
+    height: 150px;
+    width: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+  }
+  .box-1 {
+    background-image: url("@/assets/images/person01.jpg");
+    border-color: $white;
+    border-width: 5px;
+  }
+  .box-2 {
+    background-image: url("@/assets/images/person02.jpg");
+  }
+  .box-3 {
+    background-image: url("@/assets/images/person03.jpg");
+  }
+}

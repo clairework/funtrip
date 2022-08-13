@@ -1,0 +1,66 @@
+.favorite-base {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.favorite-banner{
+  background-image: url("@/assets/images/favbanner.jpg");
+  background-position: left bottom;
+  background-size: cover; //add
+  background-repeat: no-repeat;
+  height: 200px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($black, $alpha: 0.2);
+  }
+  .title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30%;
+  }
+  .h2 {
+    font-size: 200%;
+  }
+}
+@include media-breakpoint-up(md) {
+  .favorite-banner {
+    height: 300px;
+  }
+}
+
+  .section_favorites {
+    .favbox {
+      height:180px;
+    }
+    .img-wrap {
+      padding-left: 5px;
+      img {
+        overflow: hidden;
+        width: 180px;
+        height: 140px;
+      }
+    }
+    .close {
+      color: $gray-500;
+      font-size: 20px;
+    }
+  }
+
+  .custom-item {
+    position: relative;
+    .del-icon {
+      padding-top: 5px;
+      padding-right: 10px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      cursor: pointer;
+    }
+  }
+  

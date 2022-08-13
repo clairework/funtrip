@@ -1,0 +1,122 @@
+*,*:before,*:after{
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+
+  .fa,.far,.fas{
+    font-family: 'Font Awesome 5 Pro';
+  }
+
+  h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    line-height: 1.5;
+    color: $dark;
+    margin: 0 !important;
+   }
+
+  a{
+    text-decoration: none !important;
+  }
+
+img{
+    width:100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position : center center;
+  }
+
+ul{
+  padding-left: 0 !important;
+  list-style: none !important;
+  margin: 0 !important;
+}
+
+li{
+  color: $dark;
+}
+
+.link {
+  width: 20%;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  font-weight: bold;
+  opacity: 0.9;
+  border-radius: 20px;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+  
+.toTop {
+  position: fixed;
+  display: flex;
+  opacity: 0;
+  bottom: 30px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  line-height: 0.6;
+  z-index: 20;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+  .icon {
+    font-size: 18px;
+  }
+  &.show {
+    opacity: 0.8;
+    bottom: 15px;
+  }
+}
+
+.window-height{
+  min-height: 75vh;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.btn-outline-primary{
+  &:hover{
+    color: $white !important;
+  }
+}
+
+.list-group-item{
+  color: $primaryLight;
+}
+// productModal設定
+.row label{
+  color: $secondaryDark;
+}
+.row input{
+  border: 1px solid $primaryLight;
+}
+
+.dropdown-menu-end[data-bs-popper] {
+  right: -140% !important;
+  margin-top: 1rem;
+  @include media-breakpoint-up(md) {
+    right: -2% !important;
+    margin-top: 1.3rem;
+  }
+}
+
+.form-control:disabled, .form-control[readonly]{
+  background-color: $light;
+}
+
+.mt-n15{
+  margin-top: -100px;
+  @include media-breakpoint-up(md) {
+    margin-top: -120px;
+  }
+}
+
+.mt-lg-n10{
+  @include media-breakpoint-up(md) {
+    margin-top: -60px;
+  }
+}
