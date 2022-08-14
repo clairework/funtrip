@@ -1,4 +1,3 @@
-// 匯入 defineStore 的方法
 import axios from 'axios'
 import { defineStore } from 'pinia'
 import Swal from 'sweetalert2'
@@ -6,9 +5,7 @@ import Swal from 'sweetalert2'
 import debounce from 'lodash/debounce'
 import statusStore from './statusStore'
 const status = statusStore()
-// 這裡帶入兩個參數，一個是store 名稱、另一個是屬性參數
 export default defineStore('cartStore', {
-  // 對應 data
   state: () => ({
     cartData: {
       carts: [],
@@ -16,7 +13,6 @@ export default defineStore('cartStore', {
     },
     coupon_code: ''
   }),
-  // 對應 methods (物件形式)
   actions: {
     getCartList () {
       status.isBounced = true
@@ -42,7 +38,6 @@ export default defineStore('cartStore', {
       })
         .then((res) => {
           this.getCartList()
-          // status.pushMsg(res, '更新', '已成功更新購物車')
           Swal.fire({
             position: 'center',
             icon: 'success',
@@ -51,7 +46,6 @@ export default defineStore('cartStore', {
             timer: 2000
           })
         }).catch(() => {
-          // status.pushMsg(false, '更新', '更新購物車失敗')
           Swal.fire({
             position: 'center',
             icon: 'error',
@@ -65,7 +59,6 @@ export default defineStore('cartStore', {
       axios.delete(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/cart/${item.id}`)
         .then((res) => {
           this.getCartList()
-          // status.pushMsg(res, '刪除', '已成功刪除品項')
           Swal.fire({
             position: 'center',
             icon: 'success',
@@ -74,7 +67,6 @@ export default defineStore('cartStore', {
             timer: 2000
           })
         }).catch(() => {
-          // status.pushMsg(false, '刪除', '刪除品項失敗')
           Swal.fire({
             position: 'center',
             icon: 'error',
@@ -90,7 +82,6 @@ export default defineStore('cartStore', {
         .then((res) => {
           status.isLoadingItem = ''
           this.getCartList()
-          // status.pushMsg(res, '刪除', '已成功刪除所有品項')
           Swal.fire({
             position: 'center',
             icon: 'success',
@@ -100,7 +91,6 @@ export default defineStore('cartStore', {
           })
         }).catch(() => {
           status.isLoadingItem = ''
-          // status.pushMsg(false, '刪除', '刪除所有品項失敗')
           Swal.fire({
             position: 'center',
             icon: 'error',
@@ -111,16 +101,11 @@ export default defineStore('cartStore', {
         })
     },
     addToCart: debounce(function (product, qty = 1) {
-      // 如果選擇的數量>=庫存就return
-      // console.log('cartStore-->addToCart')
       status.isLoadingItem = product.id
-      // 篩選出cartData與指定商品中id相同的資料
       let temp = this.cartData.carts.filter(item => item.product_id === product.id)
-      // 取陣列中第一個物件
       temp = { ...temp[0] }
       const resultQty = temp.qty + qty
       if (resultQty > product.inventory) {
-        // status.pushMsg(false, '加入', '超過庫存數量')
         Swal.fire({
           position: 'center',
           icon: 'warning',
@@ -137,7 +122,6 @@ export default defineStore('cartStore', {
           }
         }).then((res) => {
           this.getCartList()
-          // status.pushMsg(res, '加入', '已成功加入購書車')
           Swal.fire({
             position: 'center',
             icon: 'success',
@@ -147,7 +131,6 @@ export default defineStore('cartStore', {
           })
           status.isLoadingItem = ''
         }).catch(() => {
-          // status.pushMsg(false, '加入', '加入購書車失敗')
           Swal.fire({
             position: 'center',
             icon: 'error',
@@ -167,7 +150,6 @@ export default defineStore('cartStore', {
         })
           .then((res) => {
             this.getCartList()
-            // status.pushMsg(res, '套用', '已套用優惠券')
             console.log(this.coupon_code)
             console.log(res)
             Swal.fire({
@@ -178,7 +160,6 @@ export default defineStore('cartStore', {
               timer: 2000
             })
           }).catch(() => {
-            // status.pushMsg(false, '套用', '套用優惠券失敗')
             Swal.fire({
               position: 'center',
               icon: 'error',
@@ -192,7 +173,6 @@ export default defineStore('cartStore', {
     copyCouponCode (text) {
       navigator.clipboard.writeText(text)
         .then(() => {
-          // status.pushMsg(true, '複製', '您已成功複製優惠碼!')
           Swal.fire({
             position: 'center',
             icon: 'success',

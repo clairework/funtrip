@@ -1,8 +1,8 @@
 <template>
   <div ref="cart" class="cursor-default bg-white pt-0">
-    <div @click="dropdownMenu" >
+    <div class="cart-popup" @click="dropdownMenu" >
       <!-- cart-header -->
-      <div class="py-3 d-flex flex-column align-items-center">
+      <div class=" py-3 d-flex flex-column align-items-center">
         <p class="fs-3 fw-bold text-dark letter-md-spacing border-primary">購物車</p>
       </div>
       <!--cart-body -->
@@ -20,14 +20,14 @@
             <i class="fa-solid fa-triangle-exclamation text-primaryDark fa-2x mb-3"></i>
               <p class="fw-bold mb-4">購物車內沒有商品</p>
           </div>
-          <!-- 購物車品項 -->
+          <!-- 品項 -->
           <li class="d-flex justify-content-between align-items-center border-bottom-1 border-primaryLight p-3 ms-4 me-6" v-for="item in cartData.carts" :key="item.id">
-            <div class="d-flex align-items-center w-100">
+            <div class="d-flex align-items-center">
               <!--圖片 -->
               <router-link class="overflow-hidden cursor-pointer me-4 " :to="`/product/${item.product.id}`">
                   <img class="imgbox_small" :src="item.product.imageUrl" :alt="item.product.title">
               </router-link>
-              <!--cart-body -->
+              <!--title -->
               <div class=" w-100 me-4">
                 <p class="fw-bold">{{ item.product.title }}</p>
                 <!--單價 -->

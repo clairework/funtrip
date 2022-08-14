@@ -21,8 +21,8 @@
               <span class="d-none d-md-block">購物車</span>
             </div>
           </div>
-          <!-- cart -->
-          <div class="dropdown-menu dropdown-menu-end vw-87.5 vw-md-27.5 rounded-4">
+          <!-- cart 下拉式選單-->
+          <div class="dropdown-menu dropdown-menu-end rounded-4">
             <CartList @get-cart-list="getCartList"></CartList>
           </div>
         </div>
