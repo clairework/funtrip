@@ -2,7 +2,7 @@
   <div class="position-relative bg-light window-height">
     <div class="container position-absolute top-50 start-50 translate-middle mb-10">
       <div class="row justify-content-center">
-        <div class="col-md-4">
+        <div class="col-md-8 col-lg-5">
           <form id="form" class="form-signin shadow" @submit.prevent="signIn">
             <div class="bg-white box-shadow pt-3 rounded-4">
               <h1 class="text-center text-Dark fw-bold mb-5">
