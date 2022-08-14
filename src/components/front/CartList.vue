@@ -20,7 +20,7 @@
             <i class="fa-solid fa-triangle-exclamation text-primaryDark fa-2x mb-3"></i>
               <p class="fw-bold mb-4">購物車內沒有商品</p>
           </div>
-          <!-- 品項 -->
+          <!-- buy list -->
           <li class="d-flex justify-content-between align-items-center border-bottom-1 border-primaryLight p-3 ms-4 me-6" v-for="item in cartData.carts" :key="item.id">
             <div class="d-flex align-items-center">
               <!--圖片 -->

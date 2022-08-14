@@ -8,7 +8,7 @@
     <OrderSteps :orderId="order" :step="step"></OrderSteps>
     <div class="container pt-14 pb-5 pb-md-9">
       <div class="row justify-content-center">
-        <div class="col-md-8 mb-6 mb-md-0">
+        <div class="col-lg-8 mb-6 mb-md-0">
           <div class="position-sticky top-20">
             <!-- 訂單編號 -->
              <div class="mb-8">
@@ -63,7 +63,7 @@
           </div>
         </div>
         <!-- 收件人資料 -->
-        <div class="col-md-4">
+        <div class="col-lg-4">
             <form class="bg-primaryLight p-4 p-md-8 shadow">
               <h2 class="category fs-4 fs-md-3 d-inline-block text-primaryDark p-2 fw-bold mb-6">收件人資料</h2>
                   <div class="mb-3">

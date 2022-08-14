@@ -11,7 +11,7 @@
          <!--justify-content-center -->
         <div class="row">
            <!--左邊: 確認訂單 -->
-            <div class="col-md-8 pb-4">
+            <div class="col-lg-8 pb-4">
               <h2 class="fs-4 fs-md-3 d-inline-block text-primaryDark p-2 fw-bold mb-6">確認訂單</h2>
               <!-- 如果購物車為空 -->
               <div class="w-100 d-flex flex-column align-items-center py-5"
@@ -49,9 +49,9 @@
                   <td>
                     <p class="fw-bold">{{ item.product.title }}</p>
                     <!--數量按鈕1手機版-->
-                    <div class="input-group d-md-none">
+                    <div class="input-group d-lg-none">
                         <p><span class="text-danger fs-small " v-if="item.qty>=item.product.inventory">選取已達上限</span></p>
-                        <div class="input-group w-md-75">
+                        <div class="input-group w-lg-75">
                           <button class="btn btn-outline-primaryDark minus fs-small" type="button"
                           @click="updateCart(item, item.qty--)" :class="{'disabled':item.qty<=1}">
                               <i class="fa-solid fa-minus"></i>
@@ -70,7 +70,7 @@
                       <p class="fw-bold text-primaryDark">NT$ {{ item.product.price }}</p>
                   </td>
                   <!-- 數量按钮2桌面版-->
-                  <td class="text-center d-none d-md-table-cell">
+                  <td class="text-center d-none d-lg-table-cell">
                       <p><span class="text-danger fs-small ms-2" v-if="item.qty>=item.product.inventory">選取已達上限</span></p>
                       <div class="input-group">
                         <div class="input-group ">
@@ -118,7 +118,7 @@
                 </div>
             </div>
             <!-- 右邊--訂購人資料 -->
-            <div class="col-md-4">
+            <div class="col-lg-4">
               <form-view ref="form" class="bg-primaryLight p-4 p-md-8 shadow" v-slot="{ errors }">
                 <h2 class="category fs-4 fs-md-3 d-inline-block text-primaryDark p-2 fw-bold mb-6">填寫訂購人資料</h2>
                   <div class="mb-3">
