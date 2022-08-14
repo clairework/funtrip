@@ -13,7 +13,7 @@
           </div>
         </div>
         <div class="col">
-          <div class="text-center pt-4 pb-5">
+          <div class="text-center pt-4 pb-3">
             <div class="my-1">
               <router-link  class="me-4 h4" to="/login">
                 <i class="fas fa-user-cog text-dark "></i>
@@ -28,7 +28,7 @@
             </span>
           </div>
         </div>
-        <div class="col mb-3 mb-md-0">
+        <div class="col mb-3 mb-lg-3">
           <h3 class="text-center fw-bolder py-2">聯絡我們</h3>
           <div class="d-flex justify-content-center text-dark">
             <div class="d-flex flex-column">

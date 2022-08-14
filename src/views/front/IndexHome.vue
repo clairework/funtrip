@@ -46,7 +46,7 @@
                     </div>
                     <div class="text-start ms-3">
                         <h4 class="h5 indexbox-text">價格實惠</h4>
-                        <p>平實的價格，豐富的行程</p>
+                        <p>價格平實，行程豐富</p>
                     </div>
                 </div>
                 <div class="col-md-4 indexbox d-flex">
@@ -116,12 +116,12 @@
             <div class="row mt-5 align-items-center">
               <div class="col-lg-6">
                 <div class="row justify-content-lg-between row-cols-1 row-cols-lg-2">
-                  <div class="col-lg-3">
+                  <div class="col-lg-2">
                     <h3 class="text-primary">
                       韓國
                     </h3>
                   </div>
-                  <div class="col-lg-9">
+                  <div class="col-lg-10">
                     <div
                       class="txt"
                       data-aos="zoom-in"
@@ -143,7 +143,7 @@
                       </ul>
                       <div class="d-flex justify-content-end my-3">
                         <router-link
-                          class="link bg-secondary text-white"
+                          class="link bg-secondary text-white text-nowrap rounded-4"
                           to="/product/-N3IcpLJohiszBeXAXNK"
                         >
                           了解更多
@@ -153,6 +153,7 @@
                   </div>
                 </div>
               </div>
+              <!--韓國照片 -->
               <div class="col-lg-6">
                 <img
                   class="img-fluid rounded-3"
@@ -163,15 +164,15 @@
                 >
               </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-5 align-items-center">
               <div class="col-lg-6 order-lg-2">
                 <div class="row justify-content-lg-between">
-                  <div class="col-lg-3">
+                  <div class="col-lg-2">
                     <h3 class="text-primary h3">
                       日本
                     </h3>
                   </div>
-                  <div class="col-lg-9">
+                  <div class="col-lg-10">
                     <div
                       class="txt"
                       data-aos="zoom-in"
@@ -193,7 +194,7 @@
                       </ul>
                       <div class="d-flex justify-content-end my-3">
                         <router-link
-                          class="link bg-secondary text-white"
+                          class="link bg-secondary text-white text-nowrap rounded-4"
                           to="/product/-N3S4DhyCFccUGCnj9gt"
                         >
                           了解更多
@@ -203,6 +204,7 @@
                   </div>
                 </div>
               </div>
+              <!--日本照片-->
               <div class="col-lg-6 order-lg-1">
                 <img
                   class="img-fluid rounded-3"
