@@ -18,7 +18,9 @@
                 <input type="password" class="form-control border-primary" v-model="user.password"
                 id="password">
               </div>
-              <button type="submit" class="btn btn-primary text-white rounded-4 w-75 mt-5 mb-3 ms-5">登入</button>
+              <div class="text-center">
+              <button type="submit" class="btn btn-primary text-white rounded-2 w-80 mt-5 mb-3 text-center">登入</button>
+              </div>
               <router-link type="button"
                 class="btn  btn-white d-flex justify-content-center align-items-center text-dark mb-4" to="/">
                 <i class="bi bi-house-heart-fill h4 "></i><span class="ms-3">回到首頁</span>
