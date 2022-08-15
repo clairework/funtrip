@@ -10,16 +10,31 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-2 mb-3">
-          <div class="list-group text-center">
-            <button
-              type="button"
-              class="list-group-item list-group-item-action fw-bolder py-3 fs-5"
-              v-for="item in categories" :key="item.category"
-              @click="filterCategory(item.category)"
-              :class="isActive === item.category ? 'active' : ''"
-            >
-              {{ item.name  }}
-            </button>
+          <div class="position-sticky">
+            <div class="accordion" id="accordion" >
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                  <button class="accordion-button text-white bg-primaryDark fs-4 fs-md-3 fw-bold px-3 py-4 px-md-4 py-md-4 "
+                  type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne">洲別</button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                  <div class="accordion-body p-0">
+                    <div class="list-group text-center">
+                      <button
+                        type="button"
+                        class="list-group-item list-group-item-action fw-bolder py-3 fs-5 rounded-0"
+                        v-for="item in categories" :key="item.category"
+                        @click="filterCategory(item.category)"
+                        :class="isActive === item.category ? 'active' : ''"
+                      >
+                        {{ item.name  }}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- product清單 -->
