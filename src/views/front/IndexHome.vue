@@ -228,13 +228,12 @@
             <div class="card border-0 bg-light w-90 align-items-center ">
               <div class="card-header bg-light border-0">
                 <div class="box box-1 mb-4 mt-4"></div>
-                <p class="fs-5 fw-bold">部落客Jimmy分享</p>
+                <p class="fs-5 fw-bold text-nowrap">部落客Jimmy分享</p>
               </div>
               <div class="card-body border-top">
                 <p>
                   紀錄日本北海道,九洲楓葉行程美景
-                  <br />堅持用相機一點一滴記錄世界的美好
-                  <br />你與自由的距離只差一步
+                  <br />堅持用相機一點一滴記錄世界的美好,你與自由的距離只差一步
                 </p>
               </div>
               </div>
@@ -243,13 +242,12 @@
             <div class="card border-0 bg-light w-90 align-items-center ">
             <div class="card-header bg-light border-0">
               <div class="box box-2 mb-4 mt-4"></div>
-              <p class="fs-5 fw-bold">旅遊作家Jenny分享</p>
+              <p class="fs-5 fw-bold text-nowrap">旅遊作家Jenny分享</p>
             </div>
             <div class="card-body border-top">
               <p>
                 韓國的流行文化,親臨浪漫韓劇拍攝地點
-                <br />古蹟巡禮與現代流行文化的並存
-                <br />走過難忘的青春之旅
+                <br />古蹟巡禮與現代流行文化的並存,走過難忘的青春之旅
               </p>
             </div>
             </div>
@@ -258,13 +256,12 @@
             <div class="card border-0 bg-light w-90 align-items-center ">
             <div class="card-header bg-light border-0">
               <div class="box box-3 mb-4 mt-4"></div>
-              <p class="fs-5 fw-bold">旅遊達人Susan分享</p>
+              <p class="fs-5 fw-bold text-nowrap">旅遊達人Susan分享</p>
             </div>
             <div class="card-body border-top">
               <p>
                 喜歡探訪遠古文化,用旅行來洗滌心靈
-                <br />埃及金字塔,人面獅身
-                <br />絕佳的不凡體驗等你來發掘
+                <br />埃及金字塔,人面獅身,絕佳的不凡體驗等你來發掘
               </p>
             </div>
             </div>

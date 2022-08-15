@@ -65,19 +65,19 @@
                   <span class="icon">
                     <i class="fas fa-ticket" />
                   </span>
-                  包含所有門票
+                  包含門票
               </li>
               <li>
                   <span class="icon">
                     <i class="fas fa-bus" />
                   </span>
-                  提供飯店接送
+                  團體旅行
               </li>
               <li>
                   <span class="icon">
                     <i class="fas fa-users" />
                   </span>
-                  成團人數 : <Skeletor v-if="isLoading" width="25%"/> {{ product.team_qty }} 人
+                  <Skeletor v-if="isLoading" width="25%"/> {{ product.team_qty }} 人成行
               </li>
               </ul>
             </div>
@@ -120,9 +120,14 @@
           </div>
         </div>
       </div>
-      <div class="mb-5 mt-5">
+      <div class="mb-5 mt-5 text-center">
+        <span class="icon icon-intro">
+          <i class="fas fa-bookmark" />
+        </span>
         <h2 class="category fs-3 d-inline-block text-primaryDark fw-bold mb-4">行程介紹</h2>
+        <div class="text-start">
         <p v-html="product.description"></p>
+        </div>
       </div>
   </div>
   <section>

@@ -22,10 +22,8 @@
         <p class="text-center fw-bold mb-4 h4">請輸入訂單編號</p>
       </div>
       <div class="row justify-content-center pt-5" v-if="userOrder.id">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-8">
-              <div class="d-flex  justify-content-between align-items-center mb-4">
+            <div class="col-12 col-xl-8">
+              <div class="d-flex justify-content-between align-items-center mb-4">
                 <p class="text-primaryDark fw-bold fs-3 p-2">訂單內容</p>
                 <div class="d-flex">
                     <span class="text-primaryDark fw-bold me-2" v-if="userOrder.is_paid">已付款</span>
@@ -68,12 +66,12 @@
               </tbody>
             </table>
              <div>
-                <p class="text-secondaryDark fw-bold text-end mb-3 fs-md-4">
+                <p class="text-primaryDark fw-bold text-end mb-3 fs-md-4">
                   應付金額 : NT${{ Math.round(userOrder.total) }}
                 </p>
               </div>
             </div>
-            <div class="col-md-4 mb-5">
+            <div class="col-12 col-xl-4 mb-5">
                 <p class="text-primaryDark fw-bold fs-3 p-2 text-center mb-3">用戶資訊</p>
                 <!-- 用戶資料 -->
                 <div class="p-5 bg-primaryFour shadow-sm">
@@ -111,8 +109,6 @@
                 </table>
               </div>
             </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>

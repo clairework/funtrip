@@ -24,7 +24,7 @@
         </div>
         <!-- product清單 -->
           <div class="col-lg-10 section_products bg-light">
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xxl-3">
               <div v-for="item of products" :key="item.id" class="col mb-4">
                 <div class="card h-100 shadow-sm" >
                     <span class="badge badge-pill badge-secondaryLight"> {{ item.category }}</span>
@@ -32,22 +32,24 @@
                       <router-link :to="`/product/${item.id}`">
                       <img :src="item.imageUrl" class="card-img-top w-100">
                       </router-link>
-                      <span class="px-1 position-absolute top-0 end-0 mt-2 me-2" style="cursor: pointer;">
-                          <font-awesome-icon :icon="['fa', 'heart']" class="fs-4 text-danger"
-                            data-bs-toggle="tooltip" data-bs-placement="buttom"
-                            title="取消收藏" v-if="favoriteId.includes(item.id)"
-                            @click.prevent="toggleFavorite(item)"/>
-                          <font-awesome-icon :icon="['far', 'heart']" class="fs-4 text-danger"
-                            data-bs-toggle="tooltip" data-bs-placement="buttom"
-                            title="加入收藏" v-else
-                            @click.prevent="toggleFavorite(item)"/>
-                      </span>
                     </div>
                     <div class="card-body">
                       <div class="card-text">
-                        <h5 class="card-title">
-                          {{ item.title }}
-                        </h5>
+                        <div class="d-flex justify-content-betwen">
+                          <h5 class="card-title">
+                            {{ item.title }}
+                          </h5>
+                          <span class="px-1 position-absolute top-0 end-0 mt-2 me-2" style="cursor: pointer;">
+                            <font-awesome-icon :icon="['fa', 'heart']" class="fs-4 text-danger"
+                              data-bs-toggle="tooltip" data-bs-placement="buttom"
+                              title="取消收藏" v-if="favoriteId.includes(item.id)"
+                              @click.prevent="toggleFavorite(item)"/>
+                            <font-awesome-icon :icon="['far', 'heart']" class="fs-4 text-danger"
+                              data-bs-toggle="tooltip" data-bs-placement="buttom"
+                              title="加入收藏" v-else
+                              @click.prevent="toggleFavorite(item)"/>
+                          </span>
+                        </div>
                         <p class="card-content" v-html="item.content"></p>
                       </div>
                       <div>

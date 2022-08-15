@@ -24,14 +24,20 @@
     color: $white;
     margin-right: 10px;
   }
-  .icon-popular {
-    background-color: $red-500;
-    font-size: 16px;
+  // .icon-popular {
+  //   background-color: $red-500;
+  //   font-size: 16px;
+  // }
+  .icon-intro {
+    background-color: $third;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
   }
-  img {
-    transition: all 0.5s ease-in-out;
-    object-fit: cover;
-  }
+  // img {
+  //   transition: all 0.5s ease-in-out;
+  //   object-fit: cover;
+  // }
 }
 .breadcrumb {
   background-color: transparent;
