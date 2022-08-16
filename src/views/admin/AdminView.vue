@@ -25,9 +25,7 @@ export default {
   methods: {
     ...mapActions(statusStore, ['pushMsg']),
     checkLogin () {
-      // 取得 Token（Token 僅需要設定一次）
       const token = document.cookie.replace(/(?:(?:^|.*;\s*)zyToken\s*=\s*([^;]*).*$)|^.*$/, '$1')
-      // header的夾帶
       this.$http.defaults.headers.common.Authorization = token
       this.$http.post(`${process.env.VUE_APP_API}/api/user/check`)
         .then((res) => {
@@ -35,7 +33,6 @@ export default {
           this.pushMsg(res, '登入', '已成功登入')
         }).catch(() => {
           this.pushMsg(false, '登入', '請重新登入')
-          // 轉址到登入頁
           this.$router.push('/login')
         })
     }
