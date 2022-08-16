@@ -1,7 +1,7 @@
 <template>
     <AdminNavbar/>
     <ToastMsg/>
-    <div class="bg-light" style="height: 91vh">
+    <div style="height: 91vh">
       <router-view v-if="checkSuccess"></router-view>
     </div>
 </template>
