@@ -36,14 +36,14 @@
                 </p>
                 <!--數量-->
                 <div class="input-group">
-                    <div class="input-group w-80 w-md-60">
+                    <div class="input-group w-80 w-md-80">
                         <!--left -->
                         <button class="btn btn-outline-primary" type="button"
                         @click="updateCart(item, item.qty--)" :class="{'disabled':item.qty<=1}">
                             <i class="fa-solid fa-minus"></i>
                         </button>
                         <!--right -->
-                        <input type="number" class="form-control text-center box-shadow-none fs-small " min="1" :max="item.product.inventory"
+                        <input type="number" class="form-control text-center box-shadow-none fs-small w-20 w-md-40" min="1" :max="item.product.inventory"
                         v-model.lazy="item.qty" @change="updateCart(item)" readonly>
                         <button class="btn btn-primary" type="button"
                           @click="updateCart(item,item.qty++)" :class="{'disabled':item.qty>=item.product.inventory}">
